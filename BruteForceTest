@@ -44,12 +44,12 @@ namespace MITRE.QSD.BFT {
     
     //Running, testing, and printing operation with 6 nodes / cities:
     let testMatrix = [
-            [1, 4],
-            [3, 6],
-            [8, 12],
-            [1, 9],
-            [2, 5],
-            [3, 3]
+        [1, 4],
+        [3, 6],
+        [8, 12],
+        [1, 9],
+        [2, 5],
+        [3, 3]
     ];
     mutable (Best_distance, Best_order) = OptimiseHamiltonianCycle(testMatrix, 6);
     Message("Best order from brute force = " + Best_order + " with total distance = " + Best_distance);
