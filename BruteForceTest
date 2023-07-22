@@ -1,1 +1,29 @@
-Hallo test
+//bnewmantkd's implementation of the Brute Force Test of the Travelling Salesman Problem
+
+namespace MITRE.QSD.BFT {
+
+	open Microsoft.Quantum.Arithmetic;
+	open Microsoft.Quantum.Canon;
+	open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Convert;
+    open Microsoft.Quantum.Arrays;
+    open Microsoft.Quantum.Measurement;
+    open Microsoft.Quantum.Math;
+
+
+	operation OptimiseHamiltonianCycle (
+		x : Int[],
+		y : Int[]
+	) : Int[] {
+		//Variable declarations:
+
+        //Pre-processing:
+
+        //Iterables:
+
+        //Solving for correct Hamiltonian cycle array:
+
+        //Final return statement:
+        return [0..Length(x)-1];
+	}
+}
