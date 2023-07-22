@@ -24,6 +24,9 @@ namespace MITRE.QSD.BFT {
         //Solving for correct Hamiltonian cycle array:
 
         //Final return statement:
+        Message([0..Length(x)-1]);
         return [0..Length(x)-1];
 	}
+
+    OptimiseHamiltonianCycle(7, 7);
 }
