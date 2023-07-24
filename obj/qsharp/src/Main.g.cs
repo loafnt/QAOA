@@ -18,6 +18,8 @@ using Microsoft.Quantum.Simulation.Core;
 [assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Main\",\"Name\":\"E01Test\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\marlo\\\\Source\\\\Repos\\\\apidges\\\\QAOA\\\\Main.qs\",\"Position\":{\"Item1\":16,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":18}},\"Documentation\":[]}")]
 [assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Main\",\"Name\":\"MessageTest\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Transparent\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Full\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\marlo\\\\Source\\\\Repos\\\\apidges\\\\QAOA\\\\Main.qs\",\"Position\":{\"Item1\":23,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"target\"]},\"Type\":{\"Case\":\"Qubit\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":24},\"Item2\":{\"Line\":1,\"Column\":30}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"Qubit\"},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
 [assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Main\",\"Name\":\"MessageTest\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\marlo\\\\Source\\\\Repos\\\\apidges\\\\QAOA\\\\Main.qs\",\"Position\":{\"Item1\":23,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Main\",\"Name\":\"Message\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Opaque\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Full\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\marlo\\\\Source\\\\Repos\\\\apidges\\\\QAOA\\\\Main.qs\",\"Position\":{\"Item1\":29,\"Item2\":0},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":18}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"msg\"]},\"Type\":{\"Case\":\"String\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":20},\"Item2\":{\"Line\":1,\"Column\":23}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"String\"},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Main\",\"Name\":\"Message\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\marlo\\\\Source\\\\Repos\\\\apidges\\\\QAOA\\\\Main.qs\",\"Position\":{\"Item1\":29,\"Item2\":0},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":18}},\"Documentation\":[]}")]
 #line hidden
 namespace Main
 {
@@ -97,6 +99,12 @@ namespace Main
             set;
         }
 
+        protected ICallable<Qubit, QVoid> Reset__
+        {
+            get;
+            set;
+        }
+
         public override Func<QVoid, QVoid> __Body__ => (__in__) =>
         {
 #line hidden
@@ -111,6 +119,8 @@ namespace Main
                     MessageTest__.Apply(target);
 #line 20 "C:\\Users\\marlo\\Source\\Repos\\apidges\\QAOA\\Main.qs"
                     Microsoft__Quantum__Diagnostics__AssertQubit.Apply((Result.Zero, target));
+#line 21 "C:\\Users\\marlo\\Source\\Repos\\apidges\\QAOA\\Main.qs"
+                    Reset__.Apply(target);
                 }
 #line hidden
                 catch
@@ -140,6 +150,7 @@ namespace Main
             this.Release__ = this.__Factory__.Get<Release>(typeof(global::Microsoft.Quantum.Intrinsic.Release));
             this.MessageTest__ = this.__Factory__.Get<ICallable<Qubit, QVoid>>(typeof(MessageTest));
             this.Microsoft__Quantum__Diagnostics__AssertQubit = this.__Factory__.Get<IUnitary<(Result,Qubit)>>(typeof(global::Microsoft.Quantum.Diagnostics.AssertQubit));
+            this.Reset__ = this.__Factory__.Get<ICallable<Qubit, QVoid>>(typeof(global::Microsoft.Quantum.Intrinsic.Reset));
         }
 
         public override IApplyData __DataIn__(QVoid data) => data;
@@ -150,7 +161,7 @@ namespace Main
         }
     }
 
-    [SourceLocation("C:\\Users\\marlo\\Source\\Repos\\apidges\\QAOA\\Main.qs", OperationFunctor.Body, 24, -1)]
+    [SourceLocation("C:\\Users\\marlo\\Source\\Repos\\apidges\\QAOA\\Main.qs", OperationFunctor.Body, 24, 30)]
     public partial class MessageTest : Operation<Qubit, QVoid>, ICallable
     {
         public MessageTest(IOperationFactory m) : base(m)
@@ -183,6 +194,12 @@ namespace Main
             set;
         }
 
+        protected ICallable Microsoft__Quantum__Diagnostics__DumpMachine
+        {
+            get;
+            set;
+        }
+
         public override Func<Qubit, QVoid> __Body__ => (__in__) =>
         {
             var target = __in__;
@@ -190,6 +207,8 @@ namespace Main
             Microsoft__Quantum__Intrinsic__H.Apply(target);
 #line 26 "C:\\Users\\marlo\\Source\\Repos\\apidges\\QAOA\\Main.qs"
             Message__.Apply(Microsoft__Quantum__Convert__IntAsString.Apply(((Microsoft__Quantum__Intrinsic__M.Apply(target) == Result.One) ? 1L : 0L)));
+#line 27 "C:\\Users\\marlo\\Source\\Repos\\apidges\\QAOA\\Main.qs"
+            Microsoft__Quantum__Diagnostics__DumpMachine.Apply(QVoid.Instance);
 #line hidden
             return QVoid.Instance;
         }
@@ -198,9 +217,10 @@ namespace Main
         public override void __Init__()
         {
             this.Microsoft__Quantum__Intrinsic__H = this.__Factory__.Get<IUnitary<Qubit>>(typeof(global::Microsoft.Quantum.Intrinsic.H));
-            this.Message__ = this.__Factory__.Get<ICallable<String, QVoid>>(typeof(global::Microsoft.Quantum.Intrinsic.Message));
+            this.Message__ = this.__Factory__.Get<ICallable<String, QVoid>>(typeof(Message));
             this.Microsoft__Quantum__Convert__IntAsString = this.__Factory__.Get<ICallable<Int64, String>>(typeof(global::Microsoft.Quantum.Convert.IntAsString));
             this.Microsoft__Quantum__Intrinsic__M = this.__Factory__.Get<ICallable<Qubit, Result>>(typeof(global::Microsoft.Quantum.Intrinsic.M));
+            this.Microsoft__Quantum__Diagnostics__DumpMachine = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Diagnostics.DumpMachine<>));
         }
 
         public override IApplyData __DataIn__(Qubit data) => data;
@@ -208,6 +228,44 @@ namespace Main
         public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, Qubit target)
         {
             return __m__.Run<MessageTest, Qubit, QVoid>(target);
+        }
+    }
+
+    [SourceLocation("C:\\Users\\marlo\\Source\\Repos\\apidges\\QAOA\\Main.qs", OperationFunctor.Body, 30, -1)]
+    public partial class Message : Operation<String, QVoid>, ICallable
+    {
+        public Message(IOperationFactory m) : base(m)
+        {
+        }
+
+        String ICallable.Name => "Message";
+        String ICallable.FullName => "Main.Message";
+        protected ICallable<String, QVoid> self
+        {
+            get;
+            set;
+        }
+
+        public override Func<String, QVoid> __Body__ => (__in__) =>
+        {
+            var msg = __in__;
+#line 31 "C:\\Users\\marlo\\Source\\Repos\\apidges\\QAOA\\Main.qs"
+            self.Apply(String.Format("The result of the measurement was {0}.", msg));
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override void __Init__()
+        {
+            this.self = this;
+        }
+
+        public override IApplyData __DataIn__(String data) => new QTuple<String>(data);
+        public override IApplyData __DataOut__(QVoid data) => data;
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, String msg)
+        {
+            return __m__.Run<Message, String, QVoid>(msg);
         }
     }
 }
