@@ -13,6 +13,9 @@ namespace Main {
     open Microsoft.Quantum.Preparation;
     open Microsoft.Quantum.Diagnostics;
 
+
+
+
     @Test("QuantumSimulator")
     operation E01Test () : Unit {
         use target = Qubit();
@@ -39,6 +42,7 @@ namespace Main {
         ApplyToEach(H, register);
 
         //repeat cost and mixer steps p times
+        //I think that we might need a new gamma and beta for each p
         for i in 1..p{
             costHamiltonian(register, gamma);
             mixerHamiltonian(register, beta);
@@ -54,9 +58,8 @@ namespace Main {
         return res;
      }
 
-     operation costHamiltonian (register:Qubit[], gamma:Double):Unit{
-        //Assuning lenght of register is 5
-
+     operation costHamiltonianLength5 (register:Qubit[], gamma:Double):Unit{
+        //Assuming lenght of register is 5
         //I aint commenting this sheet
         let (q0, q1, q2, q3, q4, q5)= (register[0], register[1], register[2], register[3], register[4], register[5]);
         CNOT(q1, q0);
@@ -91,6 +94,17 @@ namespace Main {
         Rz(5.*gamma, q3);
         CNOT(q4, q3);
      }
+
+     //Flexible cost hamiltonian layer
+     //Misssing weights
+     operation costHamiltonianFlexible (register : Qubit[], gamma:Double):Unit{         
+         ApplyToEach(Rx(gamma, _), register);
+         for i in 0..Length(register){
+             for j in i+1..Length(register){
+                 Rzz(gamma, register[i], register[j]);
+             }
+         }
+	 }
 
      operation mixerHamiltonian (register:Qubit[], beta:Double):Unit{
          //uhhh yeah you just like do this
