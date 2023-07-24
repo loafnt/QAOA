@@ -36,7 +36,7 @@ namespace QAOA {
 
     //QAOA circuit loop
     @EntryPoint()
-    operation QAOA (measure:Bool[], p:Int, beta:Double, gamma:Double) : Bool[]{
+    operation QAOA (measure:Bool[], p:Int, beta:Double, gamma:Double) : Int[]{
 
         //input qubits
         use register = Qubit[Length(measure)];
@@ -52,9 +52,9 @@ namespace QAOA {
         }
 
         //Read the results as a boolean array (true==1, false==0)
-        mutable res = new Bool[Length(register)];
+        mutable res = new Int[Length(register)];
         for i in 0..Length(register){
-            set res w/= i <- (M(register[i]) == One ? true | false);
+            set res w/= i <- (M(register[i]) == One ? 1 | 0);
         }
 
         //return the results
@@ -113,4 +113,37 @@ namespace QAOA {
          //uhhh yeah you just like do this
          ApplyToEach(Rx(2.*beta, _), register);
      }
+
+     //To be implemented
+    operation cost (x:Int):Double{
+        return 0.0;
+    }
+    
+    operation meanCost(x:Int[]):Double{
+        mutable res = 0.0;
+        for i in 0..Length(x){
+            set res += cost(x[i]);
+        }
+        return res/IntAsDouble(Length(x));
+    }
+
+    operation classicalOptimizerBasic(meanCostRes:Double, gamma:Double, beta:Double, p:Int):(Double, Double){
+        mutable g = gamma;
+        mutable b = beta;
+        mutable min = [gamma, beta];
+        for i in -1..1{
+            if i !=0{
+                for j in -1..1{
+                    if j!= 0{
+                        set g = gamma + IntAsDouble(i);
+                        set b = beta + IntAsDouble(j);
+                        if meanCostRes < meanCost(QAOA([true, true, true, true, true], p, g, b)){
+                            set min = [g, b];
+                        } 
+                    }
+                }
+            }
+        }
+        return (min[0], min[1]);
+    }
 }
