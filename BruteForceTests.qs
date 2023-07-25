@@ -25,11 +25,13 @@ namespace MITRE.QSD.BFTSP {
         let (Best_distance, Best_order) = BruteForce(xTest, yTest, Length(xTest));
         Message(DoubleAsString(Best_distance));
         let cycles = GeneratePermutations(Length(xTest));
-        mutable strOrder = "";
-        for i in Best_order {
-            set strOrder += IntAsString(i);
+        mutable strOrder = "[";
+        for i in 0..Length(Best_order)-2 {
+            set strOrder += IntAsString(Best_order[i]);
             set strOrder += ", ";
         }
+        set strOrder += IntAsString(Best_order[Length(Best_order)-1]);
+        set strOrder += "]";
         Message(strOrder);
     }
 }
