@@ -36,10 +36,10 @@ namespace QAOA {
 
     //QAOA circuit loop
     @EntryPoint()
-    operation QAOA (measure:Bool[], p:Int, beta:Double, gamma:Double) : Int[]{
+    operation QAOA ( lengthRegister:Int, p:Int, beta:Double[], gamma:Double[]) : Int[]{
 
         //input qubits
-        use register = Qubit[Length(measure)];
+        use register = Qubit[lengthRegister];
 
         //prepare qubits by creating uniform superposition
         ApplyToEach(H, register);
@@ -47,8 +47,8 @@ namespace QAOA {
         //repeat cost and mixer steps p times
         //I think that we might need a new gamma and beta for each p
         for i in 1..p{
-            costHamiltonianFlexible(register, gamma);
-            mixerHamiltonian(register, beta);
+            costHamiltonianFlexible(register, gamma[p-1]);
+            mixerHamiltonian(register, beta[p-1]);
         }
 
         //Read the results as a boolean array (true==1, false==0)
@@ -127,23 +127,23 @@ namespace QAOA {
         return res/IntAsDouble(Length(x));
     }
 
-    operation classicalOptimizerBasic(meanCostRes:Double, gamma:Double, beta:Double, p:Int):(Double, Double){
-        mutable g = gamma;
-        mutable b = beta;
-        mutable min = [gamma, beta];
-        for i in -1..1{
-            if i !=0{
-                for j in -1..1{
-                    if j!= 0{
-                        set g = gamma + IntAsDouble(i);
-                        set b = beta + IntAsDouble(j);
-                        if meanCostRes < meanCost(QAOA([true, true, true, true, true], p, g, b)){
-                            set min = [g, b];
-                        } 
-                    }
-                }
-            }
-        }
-        return (min[0], min[1]);
-    }
+    // operation classicalOptimizerBasic(meanCostRes:Double, gamma:Double, beta:Double, p:Int, length:Int, learnignRate: Double):(Double, Double){
+    //     mutable g = gamma;
+    //     mutable b = beta;
+    //     mutable min = [gamma, beta];
+    //     for i in -1..1{
+    //         if i !=0{
+    //             for j in -1..1{
+    //                 if j!= 0{
+    //                     set g = gamma + IntAsDouble(i)*learnignRate;
+    //                     set b = beta + IntAsDouble(j)*learnignRate;
+    //                     if meanCostRes < meanCost(QAOA(length, p, g, b)){
+    //                         set min = [g, b];
+    //                     } 
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     return (min[0], min[1]);
+    // }
 }
