@@ -14,6 +14,23 @@ def makeGraph(): ## Not flexible, must edit this code based on problem before ru
     return graph
 
 
+def maxcut_obj(solution, graph):
+    """Given a bit string as a solution, this function returns
+    the number of edges shared between the two partitions
+    of the graph.
+    Args:
+        solution: (str) solution bit string
+        graph: networkx graph
+    Returns:
+        obj: (float) Objective
+    """
+    obj = 0
+    for i, j in graph.edges():
+        if solution[i] != solution[j]:
+            obj -= 1
+    return obj
+
+
 def compute_expectation(counts, graph):
     """Computes expectation value based on measurement results
     Args:
@@ -31,6 +48,7 @@ def compute_expectation(counts, graph):
         sum_count += count
 
     return avg/sum_count
+
 
 def main():
     measurement = sampleMethod.simulate() ## This will the execution of the quantum circuit and return the measurements
