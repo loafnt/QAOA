@@ -1,4 +1,4 @@
-﻿// QSD Lab 6 Q# Tests
+// QSD Lab 6 Q# Tests
 // Copyright 2023 The MITRE Corporation. All Rights Reserved.
 //
 // DO NOT MODIFY THIS FILE.

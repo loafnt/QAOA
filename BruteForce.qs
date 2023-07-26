@@ -62,11 +62,12 @@ namespace MITRE.QSD.BFTSP {
                 set distance += PowD((PowD(IntAsDouble(AbsI(x[j]-x[pre_j])), 2.0)+PowD(IntAsDouble(AbsI(y[j]-y[pre_j])), 2.0)), 0.5);
                 set pre_j = j;
             }
-            set distance += PowD((PowD(IntAsDouble(AbsI(x[0]-x[pre_j])), 2.0)+PowD(IntAsDouble(AbsI(y[0]-y[pre_j])), 2.0)), 0.5);
+            set distance += w[pre_j, 0];
+            mutable order = [0, i];
             if (distance < bestDist) {
-                set bestOrder = i;
+                mutable bestOrder = order;
                 set bestDist = distance;
-                //Message("Order = " + IntAsString(order) + " Distance = " + DoubleAsString(distance));
+                Message("Order = " + order + " Distance = " + distance);
             }
         }
 
