@@ -1,1 +1,1 @@
-# BWSI23
+# Quantum Approximate Optimization Algorithm
